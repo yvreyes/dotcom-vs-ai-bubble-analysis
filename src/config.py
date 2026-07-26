@@ -19,8 +19,7 @@ MARKET_PERIODS = {
             "Intel": "INTC",
             "Microsoft": "MSFT",
             "Oracle": "ORCL",
-            "Yahoo": "YHOO",
-            "Amazon": "AMZN",
+            "IBM": "IBM"
         }
     },
     "ai": {
@@ -31,8 +30,7 @@ MARKET_PERIODS = {
             "Microsoft": "MSFT",
             "Alphabet": "GOOGL",
             "Amazon": "AMZN",
-            "Meta": "META",
-            "Palantir": "PLTR"
+            "Apple": "AAPL"
         }
     }
 }

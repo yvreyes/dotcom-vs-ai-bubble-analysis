@@ -29,7 +29,7 @@ documentation.
 -   Research design
 -   Financial terminology
 
-**Milestone:** Approved project proposal.
+**Milestone:** Make it exist.
 
 ------------------------------------------------------------------------
 
@@ -55,22 +55,24 @@ Build an automated pipeline for downloading historical market data.
 
 ### Companies
 
+Top 5 stocks by peak/current market cap for each era.
+
 ### Dot-com
 
 -   Microsoft (MSFT)
 -   Cisco (CSCO)
 -   Intel (INTC)
 -   Oracle (ORCL)
--   Amazon (AMZN)
+-   IBM (IBM)
 
 ### AI
 
 -   NVIDIA (NVDA)
 -   Microsoft (MSFT)
 -   Alphabet (GOOGL)
--   AMD (AMD)
--   Meta (META)
--   Palantir (PLTR)
+-   AMAZON (AMZN)
+-   APPLE (APPL)
+
 
 ### Data
 
