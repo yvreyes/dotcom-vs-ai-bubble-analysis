@@ -25,7 +25,7 @@ MARKET_PERIODS = {
     },
     "ai": {
         "start": "2022-01-01",
-        "end": "2026-04-31",
+        "end": "2026-04-30",
         "tickers": {
             "Nvidia": "NVDA",
             "Microsoft": "MSFT",

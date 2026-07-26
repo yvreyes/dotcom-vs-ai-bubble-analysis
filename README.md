@@ -33,4 +33,4 @@ Using historical stock market data and financial metrics, the project compares p
 
 ## Project Status
 
-🟢 Phase 1 — Planning
+🟢 Woeking on Phase 3 - Chill guys im not vibe coding, but I use AI to guide me.
