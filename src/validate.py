@@ -6,4 +6,8 @@ def main():
 
 for csv_file in RAW_DATA_PATH.glob("*.csv"):
     df = pd.read_csv(csv_file)
-    print(f"File: {csv_file.name}, Rows: {len(df)}, Columns: {len(df.columns)}")
+    print("===================================")
+    print(f"File: {csv_file.name}")
+    print(f"Rows: {len(df)}")
+    print(f"Columns: {len(df.columns)}")
+    print("===================================")
