@@ -22,5 +22,3 @@ def main():
                 RAW_DATA_PATH / f"{period}_{company_name}_data.csv"
             )
 
-if __name__ == "__main__":
-    main()
