@@ -2,6 +2,7 @@ import pandas as pd
 from config import RAW_DATA_PATH
 
 def main():
+    required_col = ["Date", "Open", "High", "Low", "Close", "Volume"]
     for csv_file in RAW_DATA_PATH.glob("*.csv"):
         df = pd.read_csv(csv_file) 
 
@@ -10,15 +11,21 @@ def main():
         print("=============================\n")
 
         
-        for col_name in df.columns:
-            required_col = ["Date", "Open", "High", "Low", "Close", "Volume"]
-            if col_name in required_col:
+        # for col_name in df.columns:
+        #     if col_name in required_col:
+        #         print(f"{col_name} exists")
+        #     elif col_name not in required_col:
+        #         print(f"{col_name} is missing")
+        #     else:
+        #         print(f"{col_name} doesnt exists")    
+
+        for col_name in required_col:
+            if col_name in df.columns:
                 print(f"{col_name} exists")
-            elif col_name not in required_col:
+            elif col_name not in df.columns:
                 print(f"{col_name} is missing")
             else:
-                print(f"{col_name} doesnt exists")    
-                    
+                print(f"{col_name} doesnt exists")               
 
         # print(df.head())
        
