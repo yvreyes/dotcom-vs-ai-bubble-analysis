@@ -9,9 +9,19 @@ def main():
         print(f"File: {csv_file.name}")
         print("=============================\n")
 
+        
+        for col_name in df.columns:
+            required_col = ["Date", "Open", "High", "Low", "Close", "Volume"]
+            if col_name in required_col:
+                print(f"{col_name} exists")
+            elif col_name not in required_col:
+                print(f"{col_name} is missing")
+            else:
+                print(f"{col_name} doesnt exists")    
+                    
 
-        print(df.columns)
-        print(df.head())
+        # print(df.head())
+       
         # print(f"Rows: {len(df)}")
         # print(f"Columns: {len(df.columns)}\n")
 
