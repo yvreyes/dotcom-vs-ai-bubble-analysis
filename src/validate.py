@@ -28,12 +28,19 @@ def validate_columns(df):
             print(f"{col_name} doesnt exists")               
 
 def validate_date(df):
-    # print("Date Validation: \n")
     
-    for find_date in df["Price"]:
-
+    print("Date Validation: \n")
+    
+    for index, find_date in enumerate(df["Price"]):
         if find_date == "Date":
-           print("Date marker found")
+            print(f"Date marker for at index {index}")
+            start_index = index + 1
+
+            print(f"Actual date data starts at index {start_index}")
+            valid_dates = len(df[[find_date][start_index:]])
+            invalid_dates = enumerate(valid_dates) 
+            print(f"Valid Dates: {valid_dates}")
+            print(f"Invalid Dates: {invalid_dates}")
 
     #date order chronological
         
