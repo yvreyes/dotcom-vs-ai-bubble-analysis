@@ -26,11 +26,10 @@ Using historical stock market data and financial metrics, the project compares p
 - NumPy
 - Matplotlib
 - Jupyter Notebook
-- Git
-- GitHub
+
 
 ---
 
 ## Project Status
 
-🟢 Woeking on Phase 3 - Chill guys im not vibe coding, but I use AI to guide me.
+🟢 Just finished validating the data - Chill guys im not vibe coding, but I use AI to guide me.

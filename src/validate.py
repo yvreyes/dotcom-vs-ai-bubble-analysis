@@ -9,15 +9,11 @@ def main():
         print("=============================")
         print(f"File: {csv_file.name}")
         print("=============================\n")
-
-        
+        print(f"Rows: {len(df)}")
+        print(f"Columns: {len(df.columns)}\n")
         validate_date(df)
-    
-        # print(f"Rows: {len(df)}")
-        # print(f"Columns: {len(df.columns)}\n")
-
-        # missing_values(df)
-        # duplicate_values(df)
+        missing_values(df)
+        duplicate_values(df)
 
 def validate_columns(df):
     # Check if columns exist
@@ -28,9 +24,9 @@ def validate_columns(df):
             print(f"{col_name} doesnt exists")               
 
 def validate_date(df):
-    
-    print("Date Validation: \n")
-    
+    print("-----------------------------")
+    print("Date Validation: ")
+    print("-----------------------------")
     for index, find_date in enumerate(df["Price"]):
         if find_date == "Date":
             print(f"Date Marker: Found")
@@ -52,12 +48,15 @@ def validate_date(df):
         
 
 def missing_values(df):
+    print("-----------------------------")
     print("Missing Values:")
+    print("-----------------------------")
     for col in df.columns:
         print(f"{col}: {df[col].isnull().sum()}")    
 
 def duplicate_values(df):
     duplicates = df.duplicated().sum()
-    print(f"Duplicate rows: {duplicates}\n")
-    
+    print("-----------------------------")
+    print(f"Duplicate rows: {duplicates}")
+    print("-----------------------------")    
 main()
