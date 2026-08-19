@@ -33,18 +33,22 @@ def validate_date(df):
     
     for index, find_date in enumerate(df["Price"]):
         if find_date == "Date":
-            print(f"Date marker for at index {index}")
-            start_index = index + 1
+            print(f"Date Marker: Found")
 
-            print(f"Actual date data starts at index {start_index}")
+            start_index = index + 1
             date_values = df["Price"][start_index:]
             converted_dates = pd.to_datetime(date_values, errors="coerce")
             invalid_dates = converted_dates.isnull().sum()
             valid_dates = len(date_values) - invalid_dates
+
             print(f"Valid Dates: {valid_dates}")
             print(f"Invalid Dates: {invalid_dates}")
 
-    #Date order chronological
+            chronological = converted_dates.is_monotonic_increasing
+            if chronological == True:
+                print("Chronological Order: Valid")
+            else:
+                print("Chronological Order: Invalid")
         
 
 def missing_values(df):
