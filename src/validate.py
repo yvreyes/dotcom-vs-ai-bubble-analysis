@@ -6,14 +6,15 @@ def main():
     for csv_file in RAW_DATA_PATH.glob("*.csv"):
         df = pd.read_csv(csv_file) 
 
-        print("=============================")
-        print(f"File: {csv_file.name}")
-        print("=============================\n")
-        print(f"Rows: {len(df)}")
-        print(f"Columns: {len(df.columns)}\n")
-        validate_date(df)
-        missing_values(df)
-        duplicate_values(df)
+        # print("=============================")
+        # print(f"File: {csv_file.name}")
+        # print("=============================\n")
+        # print(f"Rows: {len(df)}")
+        # print(f"Columns: {len(df.columns)}\n")
+        # validate_date(df)
+        # missing_values(df)
+        # duplicate_values(df)
+        validate_data_type(df)
 
 def validate_columns(df):
     # Check if columns exist
@@ -45,7 +46,13 @@ def validate_date(df):
                 print("Chronological Order: Valid")
             else:
                 print("Chronological Order: Invalid")
-        
+
+def validate_data_type(df):
+    OHLCV = required_col[1:]
+    for num_col in df[OHLCV]:
+        dtp = pd.to_numeric(df[num_col], errors="coerce")
+        print(dtp)
+
 
 def missing_values(df):
     print("-----------------------------")

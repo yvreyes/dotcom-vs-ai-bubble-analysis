@@ -180,7 +180,7 @@ Create:
 ## Phase 10 --- Conclusions
 
 Answer: 
-- How similar is the AI rally to the Dot-com Bubble? 
+- How similar is the AI rally to tI’m interested in this position because it aligns closely with my background in Mathematics and Computer Science and my interest in using data to solve real-world business problems. As a fresh graduate, I’m excited to apply my skills in SQL, Python, data analysis, and visualization in a professional environment while continuing to develop as a data analyst.he Dot-com Bubble? 
 - Which differences matter most? 
 - Is AI supported by stronger fundamentals?
 
