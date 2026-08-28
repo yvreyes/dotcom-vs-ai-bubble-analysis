@@ -11,6 +11,7 @@ def main():
         print("=============================\n")
         print(f"Rows: {len(df)}")
         print(f"Columns: {len(df.columns)}\n")
+        validate_columns(df)
         validate_date(df)
         missing_values(df)
         duplicate_values(df)
@@ -28,8 +29,10 @@ def validate_date(df):
     print("-----------------------------")
     print("Date Validation: ")
     print("-----------------------------")
+    date_found = False
     for index, find_date in enumerate(df["Price"]):
         if find_date == "Date":
+            date_found = True
             print(f"Date Marker: Found")
 
             start_index = index + 1
@@ -42,18 +45,21 @@ def validate_date(df):
             print(f"Invalid Dates: {invalid_dates}")
 
             chronological = converted_dates.is_monotonic_increasing
-            if chronological == True:
+            if chronological:
                 print("Chronological Order: Valid")
             else:
                 print("Chronological Order: Invalid")
 
+    if date_found == False:
+        print("Date Marker: Not Found")           
+
+
 def validate_data_type(df):
-    OHLCV = required_col[1:]
-    for num_col in df[OHLCV]:
+    ohlcv_columns = required_col[1:]
+    for num_col in df[ohlcv_columns]:
         converted_val = pd.to_numeric(df[num_col], errors="coerce")
         invalid_val = converted_val.isnull().sum()
         print(f"{num_col}: Invalid values {invalid_val}")
-
 
 def missing_values(df):
     print("-----------------------------")
